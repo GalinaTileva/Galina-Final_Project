@@ -1,4 +1,4 @@
-package org.project.selenium.base;
+package org.project.pages;
 
 import org.project.drivers.DriverFactory;
 import org.openqa.selenium.By;
@@ -39,8 +39,9 @@ public class BasePage {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
     }
 
-    // Scroll an element into view using JavaScript
     public void scrollIntoViewWithJS(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
+
 }

@@ -1,0 +1,4 @@
+username,error-message
+GreenAlien,"Username GreenAlien is not available."
+123@,"Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen."
+1111111111111111111111111111111111111111,"Username is too long (maximum is 39 characters)."

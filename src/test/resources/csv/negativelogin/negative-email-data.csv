@@ -1,0 +1,6 @@
+email, error-message
+abc12@example,"Email is invalid or already taken"
+def34@example.,"Email is invalid or already taken"
+ghi56example.com,"Email is invalid or already taken"
+jkl78example@,"Email is invalid or already taken"
+mno90@.com,"Email is invalid or already taken"

@@ -1,4 +1,4 @@
-package org.project.selenium.base;
+package org.project.tests.selenium;
 
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
@@ -8,6 +8,7 @@ import org.project.drivers.DriverFactory;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,8 +19,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 
-public class MainTest {
-    private String url;
+public class SelenBaseTest {
+    protected String url;
     private int implicitWait;
     private String browser;
 
@@ -29,8 +30,7 @@ public class MainTest {
         loadUrl();
     }
 
-
-    private void loadUrl() {
+    protected void loadUrl() {
         WebDriver driver = DriverFactory.getDriver();
         driver.get(url);
     }
@@ -79,5 +79,4 @@ public class MainTest {
 
         DriverFactory.quitDriver();
     }
-
 }
