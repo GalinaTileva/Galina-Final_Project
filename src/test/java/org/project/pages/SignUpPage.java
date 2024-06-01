@@ -1,5 +1,6 @@
 package org.project.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -14,8 +15,14 @@ public class SignUpPage extends BasePage {
     @FindBy(xpath = "//p[contains(text(),'By creating an account')]")
     private WebElement infoText;
 
-    @FindBy(css = ".js-continue-hint-container")
-    private WebElement hintMessageContainer;
+    @FindBy(css = "#email-err")
+    private WebElement emailErrorContainer;
+
+    @FindBy(css = ".password-validity-summary")
+    private WebElement passwordErrorContainer;
+
+    @FindBy(css = "#login-err")
+    private WebElement usernameErrorContainer;
 
     @FindBy(css = ".js-continue-container")
     private WebElement signUpContainer;
@@ -51,9 +58,22 @@ public class SignUpPage extends BasePage {
     private WebElement usernameInput;
 
     @FindBy(css = "[data-continue-to='opt-in-container']")
-    private WebElement contLoginButton;
+    private WebElement contPreferButton;
+
+    @FindBy(xpath = "//label[contains(text(),'Email preferences')]")
+    private WebElement preferText;
+
+    @FindBy(xpath = "//label[contains(text(),'Receive')]")
+    private WebElement preferInfo;
+
+    @FindBy(css = "#opt_in")
+    private WebElement checkbox;
+
+    @FindBy(css = "[data-continue-to='captcha-and-submit-container']")
+    private WebElement submitSignUpButton;
 
 
+    @Step("Show element from Sign Up Page")
     public Boolean signUpElementVisible() {
         try {
             waitForElementToBeVisible(signUpContainer);
@@ -62,5 +82,92 @@ public class SignUpPage extends BasePage {
             return false;
         }
     }
+
+    @Step("Set fail email")
+    public void setFailEmail(String email) {
+        waitForElementToBeVisible(emailInput);
+        emailInput.click();
+        emailInput.sendKeys(email);
+    }
+
+    @Step("Set valid email")
+    public void setValidEmail(String email) {
+        waitForElementToBeVisible(emailInput);
+        emailInput.click();
+        emailInput.sendKeys(email);
+        waitForElementToBeClickable(contToPassButton);
+        contToPassButton.click();
+    }
+
+
+    @Step("Set fail password")
+    public void setFailPassword(String password) {
+        passwordInput.click();
+        passwordInput.sendKeys(password);
+    }
+
+    @Step("Set valid password")
+    public void setValidPassword(String password) {
+        passwordInput.click();
+        passwordInput.sendKeys(password);
+        waitForElementToBeClickable(contToUserButton);
+        contToUserButton.click();
+    }
+
+
+    @Step("Set fail username")
+    public void setFailUsername(String username) {
+        usernameInput.click();
+        usernameInput.sendKeys(username);
+    }
+
+    @Step("Set valid username")
+    public void setValidUsername(String username) {
+        usernameInput.click();
+        usernameInput.sendKeys(username);
+        waitForElementToBeClickable(contPreferButton);
+        contPreferButton.click();
+    }
+
+    @Step("Check checkbox")
+    public Boolean checkCheckbox() {
+        waitForElementToBeVisible(checkbox);
+        checkbox.click();
+        try {
+            return checkbox.isSelected();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+
+
+    @Step("Click submit sign up")
+    public VerifPage clickSubmitSignUp() {
+    waitForElementToBeClickable(submitSignUpButton);
+        submitSignUpButton.click();
+        return new VerifPage();
+    }
+
+
+
+    @Step("Get email error message")
+    public String getEmailErrorMessage() {
+        waitForElementToBeVisible(emailErrorContainer);
+        return emailErrorContainer.getText();
+    }
+
+    @Step("Get email password message")
+    public String getPasswordErrorMessage() {
+        waitForElementToBeVisible(passwordErrorContainer);
+        return passwordErrorContainer.getText();
+    }
+
+    @Step("Get email username message")
+    public String getUsernameErrorMessage() {
+        waitForElementToBeVisible(usernameErrorContainer);
+        return usernameErrorContainer.getText();
+    }
+
 
 }

@@ -20,7 +20,7 @@ import java.util.Date;
 import java.util.Properties;
 
 public class SelenBaseTest {
-    protected String url;
+    private String url;
     private int implicitWait;
     private String browser;
 
@@ -30,7 +30,7 @@ public class SelenBaseTest {
         loadUrl();
     }
 
-    protected void loadUrl() {
+    private void loadUrl() {
         WebDriver driver = DriverFactory.getDriver();
         driver.get(url);
     }
@@ -58,6 +58,8 @@ public class SelenBaseTest {
     }
 
 
+
+
     @AfterMethod
     public void tearDown(ITestResult result) {
 
@@ -71,7 +73,8 @@ public class SelenBaseTest {
             Path path = Paths.get("./Screenshots", fileName);
             try {
                 Files.copy(screenshotFile.toPath(), path);
-                Allure.addAttachment("Screenshot on Failure", "image/png", Files.newInputStream(path), ".png");
+                Allure.addAttachment("Screenshot on Failure", "image/png", Files.newInputStream(path),
+                        ".png");
             } catch (IOException e) {
                 e.printStackTrace();
             }

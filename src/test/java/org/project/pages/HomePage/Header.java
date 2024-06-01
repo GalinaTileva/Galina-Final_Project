@@ -1,8 +1,10 @@
-package org.project.pages;
+package org.project.pages.HomePage;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.project.pages.BasePage;
+import org.project.pages.SignUpPage;
 
 public class Header extends BasePage {
 
@@ -25,16 +27,16 @@ public class Header extends BasePage {
     private WebElement searchBar;
 
     @FindBy(css = ".HeaderMenu-link--sign-in")
-    private WebElement loginButton;
+    private WebElement signInButton;
 
     @FindBy(css = ".HeaderMenu-link--sign-up")
     private WebElement signUpButton;
 
-    @Step("Click Sign Up")
-    public void clickSignUp() {
+
+    @Step("Click 'Sign Up' button")
+    public SignUpPage clickSignUpButton() {
         signUpButton.click();
+        return new SignUpPage();
     }
-
-
 
 }
