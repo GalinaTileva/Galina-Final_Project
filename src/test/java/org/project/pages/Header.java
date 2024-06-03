@@ -1,4 +1,4 @@
-package org.project.pages.HomePage;
+package org.project.pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;

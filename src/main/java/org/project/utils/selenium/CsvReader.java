@@ -1,4 +1,4 @@
-package org.project.csv;
+package org.project.utils.selenium;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 import java.io.FileReader;

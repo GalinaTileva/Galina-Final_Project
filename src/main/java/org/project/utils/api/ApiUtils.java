@@ -6,9 +6,10 @@ import io.restassured.specification.RequestSpecification;
 
 public class ApiUtils {
 
-    public static RequestSpecification jsonRequestSpec() {
+    public static RequestSpecification jsonHeaderRequestSpec() {
         return new RequestSpecBuilder()
                 .setContentType(ContentType.JSON)
                 .build();
     }
+
 }

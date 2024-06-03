@@ -1,6 +1,6 @@
 package org.project.tests.selenium;
 import io.qameta.allure.*;
-import org.project.pages.HomePage.Header;
+import org.project.pages.Header;
 import org.project.pages.SignUpPage;
 import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertTrue;

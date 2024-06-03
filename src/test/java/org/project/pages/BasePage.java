@@ -1,8 +1,6 @@
 package org.project.pages;
 
-import io.qameta.allure.Step;
-import org.project.drivers.DriverFactory;
-import org.openqa.selenium.By;
+import org.project.utils.selenium.drivers.DriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

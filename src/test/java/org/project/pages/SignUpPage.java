@@ -141,11 +141,19 @@ public class SignUpPage extends BasePage {
     }
 
 
-
     @Step("Click submit sign up")
-    public VerifPage clickSubmitSignUp() {
-    waitForElementToBeClickable(submitSignUpButton);
+    public void clickSubmitSignUp() throws InterruptedException {
+        Thread.sleep(5000);
         submitSignUpButton.click();
+    }
+
+    @Step("Go to verification page")
+    public VerifPage goToVerifPage(String email, String password, String username) throws InterruptedException {
+        setValidEmail(email);
+        setValidPassword(password);
+        setValidUsername(username);
+        clickSubmitSignUp();
+        Thread.sleep(5000);
         return new VerifPage();
     }
 

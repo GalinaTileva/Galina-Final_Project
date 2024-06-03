@@ -1,7 +1,7 @@
 package org.project.tests.selenium;
 import com.opencsv.exceptions.CsvException;
-import org.project.csv.CsvReader;
-import org.project.pages.HomePage.Header;
+import org.project.utils.selenium.CsvReader;
+import org.project.pages.Header;
 import org.project.pages.SignUpPage;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
