@@ -11,5 +11,4 @@ public class ApiUtils {
                 .setContentType(ContentType.JSON)
                 .build();
     }
-
 }

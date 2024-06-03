@@ -1,5 +1,4 @@
 package org.project.utils.api.update;
-
 public class PatchRequest {
     private String name;
 
