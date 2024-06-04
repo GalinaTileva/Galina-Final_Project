@@ -76,4 +76,5 @@ public class SignUpTestFail extends SelenBaseTest {
         soft.assertEquals(userErrorMessage, signUpPage.getUsernameErrorMessage());
         soft.assertAll();
     }
+
 }

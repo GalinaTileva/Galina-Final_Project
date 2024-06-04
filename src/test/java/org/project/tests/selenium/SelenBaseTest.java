@@ -79,7 +79,6 @@ public class SelenBaseTest {
                 e.printStackTrace();
             }
         }
-
         DriverFactory.quitDriver();
     }
 }

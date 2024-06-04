@@ -51,4 +51,5 @@ public class SignUpTestSuccess extends SelenBaseTest {
 
         assertTrue(verifPage.verifyPageElementDisplayed(), "Verify page element is not displayed");
     }
+
 }

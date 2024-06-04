@@ -22,4 +22,5 @@ public class HeaderTest extends SelenBaseTest {
 
         assertTrue("Sign up container is not visible on the sign up page", signUpPage.signUpElementVisible());
     }
+
 }
