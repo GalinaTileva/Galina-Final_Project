@@ -22,4 +22,5 @@ public class PatchResponse {
     public boolean isHasProjects() {
         return hasProjects;
     }
+
 }

@@ -1,4 +1,4 @@
-package org.project.utils.api.utils;
+package org.project.utils.api.management.utils;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -11,4 +11,5 @@ public class ApiUtils {
                 .setContentType(ContentType.JSON)
                 .build();
     }
+
 }

@@ -28,4 +28,5 @@ public class OwnerData {
     public boolean isSiteAdmin() {
         return siteAdmin;
     }
+
 }

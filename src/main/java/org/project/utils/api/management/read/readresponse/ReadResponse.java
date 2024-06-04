@@ -27,4 +27,5 @@ public class ReadResponse {
     public OwnerData getOwner() {
         return owner;
     }
+
 }
