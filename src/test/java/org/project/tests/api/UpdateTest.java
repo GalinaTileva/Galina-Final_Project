@@ -38,4 +38,5 @@ public class UpdateTest extends ApiTestBase {
          assertNotNull(response.getUpdatedAt());
          assertTrue(response.isHasProjects());
     }
+
 }
