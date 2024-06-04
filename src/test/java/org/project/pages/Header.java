@@ -38,5 +38,4 @@ public class Header extends BasePage {
         signUpButton.click();
         return new SignUpPage();
     }
-
 }

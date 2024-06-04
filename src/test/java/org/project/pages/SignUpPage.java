@@ -171,4 +171,5 @@ public class SignUpPage extends BasePage {
         waitForElementToBeVisible(usernameErrorContainer);
         return usernameErrorContainer.getText();
     }
+
 }

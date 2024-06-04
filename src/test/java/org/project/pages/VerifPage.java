@@ -30,4 +30,5 @@ public class VerifPage extends BasePage {
             return false;
         }
     }
+
 }

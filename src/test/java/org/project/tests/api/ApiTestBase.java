@@ -6,7 +6,7 @@ import io.restassured.config.RestAssuredConfig;
 import org.testng.annotations.BeforeMethod;
 
 public class ApiTestBase {
-    static final String TOKEN = "";
+    static final String TOKEN = "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";
 
     @BeforeMethod
     public void setUp () {
