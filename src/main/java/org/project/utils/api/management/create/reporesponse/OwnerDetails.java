@@ -16,4 +16,5 @@ public class OwnerDetails {
     public String getAvatarUrl() {
         return avatarUrl;
     }
+
 }

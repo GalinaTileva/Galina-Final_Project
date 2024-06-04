@@ -19,4 +19,5 @@ public class PermissionsData {
     public boolean isPull() {
         return pull;
     }
+
 }
