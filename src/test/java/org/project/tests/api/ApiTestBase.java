@@ -14,5 +14,4 @@ public class ApiTestBase {
         RestAssured.config = RestAssuredConfig.config()
                 .logConfig(LogConfig.logConfig().enableLoggingOfRequestAndResponseIfValidationFails());
     }
-
 }
