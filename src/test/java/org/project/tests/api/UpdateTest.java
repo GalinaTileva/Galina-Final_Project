@@ -1,17 +1,21 @@
 package org.project.tests.api;
 
-import org.project.utils.api.ApiUtils;
-import org.project.utils.api.update.PatchRequest;
-import org.project.utils.api.update.PatchResponse;
+import io.qameta.allure.*;
+import org.project.utils.api.utils.ApiUtils;
+import org.project.utils.api.management.update.PatchRequest;
+import org.project.utils.api.management.update.PatchResponse;
 import org.testng.annotations.Test;
-
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.*;
 
 public class UpdateTest extends ApiTestBase {
 
-
-    @Test(description = "Rename repository", priority = 2)
+    @Epic("Repository Management")
+    @Feature("Repository Update")
+    @Story("Rename Repository")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Successful rename repository.")
+    @Test(priority = 2)
     public void renameRepo() {
         PatchRequest patchRequest = new PatchRequest();
         patchRequest.setName("Sega");
@@ -33,8 +37,5 @@ public class UpdateTest extends ApiTestBase {
          assertEquals("Sega", response.getName());
          assertNotNull(response.getUpdatedAt());
          assertTrue(response.isHasProjects());
-
-
     }
-
 }

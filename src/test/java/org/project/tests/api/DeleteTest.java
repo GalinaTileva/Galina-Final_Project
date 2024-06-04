@@ -1,15 +1,19 @@
 package org.project.tests.api;
 
+import io.qameta.allure.*;
 import io.restassured.response.Response;
-import org.project.utils.api.create.reporequest.RepoRequest;
-import org.project.utils.api.delete.DeleteRequest;
+import org.project.utils.api.management.delete.DeleteRequest;
 import org.testng.annotations.Test;
-import static io.restassured.RestAssured.basePath;
 import static io.restassured.RestAssured.given;
 
 public class DeleteTest extends ApiTestBase {
 
-    @Test(description = "Delete specific repository if exists", priority = 3)
+    @Epic("Repository Management")
+    @Feature("Repository Delete")
+    @Story("Delete repository.")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Delete specific repository if exists.")
+    @Test(priority = 3)
     public void deleteRepo() {
         DeleteRequest deleteRequest = new DeleteRequest();
         deleteRequest.setRepoNameDelete("Sega");
@@ -40,7 +44,12 @@ public class DeleteTest extends ApiTestBase {
         }
     }
 
-    @Test(description = "Check repository is deleted", priority = 4)
+    @Epic("Repository Management")
+    @Feature("Repository Delete")
+    @Story("Verify specific repository does not exist.")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Check specific repository does not exist.")
+    @Test(priority = 4)
     public void checkIfDeleted() {
         DeleteRequest deleteRequest = new DeleteRequest();
         deleteRequest.setRepoNameDelete("Sega");

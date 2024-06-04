@@ -1,16 +1,21 @@
 package org.project.tests.api;
 
-import org.project.utils.api.ApiUtils;
-import org.project.utils.api.create.reporequest.RepoRequest;
-import org.project.utils.api.create.reporesponse.RepoResponse;
+import io.qameta.allure.*;
+import org.project.utils.api.utils.ApiUtils;
+import org.project.utils.api.management.create.reporequest.RepoRequest;
+import org.project.utils.api.management.create.reporesponse.RepoResponse;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.*;
 
 public class CreateTest extends ApiTestBase {
 
-
-    @Test(description = "Create a repository", priority = 0)
+    @Epic("Repository Management")
+    @Feature("Repository Creation")
+    @Story("User can create new repository.")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Generating a new repository.")
+    @Test(priority = 0)
     public void createRepo() {
         RepoRequest repoRequest = new RepoRequest();
         repoRequest.setName("Utre");

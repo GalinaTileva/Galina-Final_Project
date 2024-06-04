@@ -21,7 +21,7 @@ public class VerifPage extends BasePage {
     @FindBy(xpath = "//p[contains(text(),'Audio')]")
     private WebElement audioButton;
 
-    @Step("Show element from Sign Up Page")
+    @Step("Show element from 'Sign Up' page")
     public Boolean verifyPageElementDisplayed() throws InterruptedException {
         Thread.sleep(5000);
         try {
@@ -30,6 +30,4 @@ public class VerifPage extends BasePage {
             return false;
         }
     }
-
-
 }

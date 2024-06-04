@@ -4,7 +4,7 @@
 <suite name="Github Test Suite" parallel="methods" thread-count="4" data-provider-thread-count="4" verbose="1">
     <test name="Github Suite tests">
         <packages>
-            <package name="org/project/tests.*"/>
+            <package name="org.project.tests.*"/>
         </packages>
     </test>
 </suite>

@@ -10,6 +10,4 @@ public class HomePage extends BasePage {
     private WebElement announcement;
 
     //info
-
-
 }

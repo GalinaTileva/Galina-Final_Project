@@ -1,6 +1,6 @@
 package org.project.pages;
 
-import org.project.utils.selenium.drivers.DriverFactory;
+import org.project.utils.drivers.DriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class BasePage {
-
     private WebDriver driver;
     public WebDriverWait wait;
 
@@ -39,6 +38,4 @@ public class BasePage {
     public void scrollIntoViewWithJS(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
-
-
 }

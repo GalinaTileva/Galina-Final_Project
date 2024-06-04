@@ -1,4 +1,4 @@
-package org.project.utils.api.create.reporesponse;
+package org.project.utils.api.management.create.reporesponse;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

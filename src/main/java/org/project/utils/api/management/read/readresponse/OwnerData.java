@@ -1,4 +1,4 @@
-package org.project.utils.api.read.readresponse;
+package org.project.utils.api.management.read.readresponse;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

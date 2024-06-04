@@ -73,7 +73,7 @@ public class SignUpPage extends BasePage {
     private WebElement submitSignUpButton;
 
 
-    @Step("Show element from Sign Up Page")
+    @Step("Visibility of 'Sign Up' page element")
     public Boolean signUpElementVisible() {
         try {
             waitForElementToBeVisible(signUpContainer);
@@ -99,7 +99,6 @@ public class SignUpPage extends BasePage {
         contToPassButton.click();
     }
 
-
     @Step("Set fail password")
     public void setFailPassword(String password) {
         passwordInput.click();
@@ -113,7 +112,6 @@ public class SignUpPage extends BasePage {
         waitForElementToBeClickable(contToUserButton);
         contToUserButton.click();
     }
-
 
     @Step("Set fail username")
     public void setFailUsername(String username) {
@@ -129,7 +127,7 @@ public class SignUpPage extends BasePage {
         contPreferButton.click();
     }
 
-    @Step("Check checkbox")
+    @Step("Select and check checkbox")
     public Boolean checkCheckbox() {
         waitForElementToBeVisible(checkbox);
         checkbox.click();
@@ -140,8 +138,7 @@ public class SignUpPage extends BasePage {
         }
     }
 
-
-    @Step("Click submit sign up")
+    @Step("Click submit sign up button")
     public void clickSubmitSignUp() throws InterruptedException {
         Thread.sleep(5000);
         submitSignUpButton.click();
@@ -156,8 +153,6 @@ public class SignUpPage extends BasePage {
         Thread.sleep(5000);
         return new VerifPage();
     }
-
-
 
     @Step("Get email error message")
     public String getEmailErrorMessage() {
@@ -176,6 +171,4 @@ public class SignUpPage extends BasePage {
         waitForElementToBeVisible(usernameErrorContainer);
         return usernameErrorContainer.getText();
     }
-
-
 }

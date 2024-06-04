@@ -1,14 +1,19 @@
 package org.project.tests.api;
 
-
-import org.project.utils.api.read.readresponse.ReadResponse;
+import io.qameta.allure.*;
+import org.project.utils.api.management.read.readresponse.ReadResponse;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import static io.restassured.RestAssured.given;
 
 public class ReadTest extends ApiTestBase {
 
-    @Test(description = "Read repository details", priority = 1)
+    @Epic("Repository Management")
+    @Feature("Repository Retrieval.")
+    @Story("User can access repository details.")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("Getting repository details.")
+    @Test(priority = 1)
     public void readRepo() {
         SoftAssert soft = new SoftAssert();
 
@@ -16,11 +21,11 @@ public class ReadTest extends ApiTestBase {
                 .basePath("/repos/{owner}/{repo}")
                 .pathParam("owner", "BiraSKartofki")
                 .pathParam("repo", "Utre")
-                    .when()
-                            .get()
-                                .then()
-                                .statusCode(200)
-                                    .extract().as(ReadResponse.class);
+                .when()
+                .get()
+                .then()
+                .statusCode(200)
+                .extract().as(ReadResponse.class);
 
 
         soft.assertNotNull(response.getId());
@@ -32,5 +37,4 @@ public class ReadTest extends ApiTestBase {
         soft.assertFalse(response.getOwner().isSiteAdmin());
         soft.assertAll();
     }
-
 }

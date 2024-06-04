@@ -1,4 +1,5 @@
-package org.project.utils.api.update;
+package org.project.utils.api.management.update;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

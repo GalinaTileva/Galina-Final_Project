@@ -1,4 +1,5 @@
-package org.project.utils.api.delete;
+package org.project.utils.api.management.delete;
+
 public class DeleteRequest {
     private String repoNameDelete;
     private String username;

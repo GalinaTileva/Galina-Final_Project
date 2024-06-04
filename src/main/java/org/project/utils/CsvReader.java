@@ -1,4 +1,4 @@
-package org.project.utils.selenium;
+package org.project.utils;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;

@@ -1,6 +1,7 @@
-package org.project.utils.api.update;
-public class PatchRequest {
-    private String name;
+package org.project.utils.api.management.create.reporequest;
+
+public class RepoRequest {
+    public String name;
 
     public String getName() {
         return name;

@@ -1,4 +1,5 @@
 package org.project.tests.selenium;
+
 import io.qameta.allure.*;
 import org.project.pages.Header;
 import org.project.pages.SignUpPage;
@@ -10,17 +11,15 @@ public class HeaderTest extends SelenBaseTest {
     private SignUpPage signUpPage;
 
     @Epic("User Management")
-    @Feature("Navigate To Registration Form")
-    @Story("Opening Registration Form")
-    @Severity(SeverityLevel.CRITICAL)
-    @Test
+    @Feature("User Navigation")
+    @Story("Navigation from home to sign up page for new registration.")
+    @Severity(SeverityLevel.NORMAL)
+    @Description("User can navigate from home to sign up page and is redirected to sign up form.")
+    @Test(priority = 5)
     public void goToSignUpPage(){
         header = new Header();
         signUpPage = header.clickSignUpButton();
 
         assertTrue("Sign up container is not visible on the sign up page", signUpPage.signUpElementVisible());
     }
-
-
-
 }
