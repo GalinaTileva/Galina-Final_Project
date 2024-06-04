@@ -65,7 +65,5 @@ public class DeleteTest extends ApiTestBase {
                 .get()
                 .then()
                 .statusCode(404);
-
     }
-
 }
