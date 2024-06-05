@@ -26,7 +26,7 @@ public class SignUpTestSuccess extends SelenBaseTest {
     @Story("Preferences Checkbox Selection")
     @Severity(SeverityLevel.NORMAL)
     @Description("Verify checkbox is selected.")
-    @Test(dataProvider = "positive-login-data", priority = 9)
+    @Test(dataProvider = "positive-login-data")
     public void checkboxSelected(String email, String password, String username) {
         header = new Header();
         signUpPage = header.clickSignUpButton();
@@ -42,7 +42,7 @@ public class SignUpTestSuccess extends SelenBaseTest {
     @Story("User can register successfully and use the application.")
     @Severity(SeverityLevel.CRITICAL)
     @Description("New user can successfully sign up for an account.")
-    @Test(dataProvider = "positive-login-data", priority = 10)
+    @Test(dataProvider = "positive-login-data")
     public void positiveLogin(String email, String password, String username) throws InterruptedException {
         header = new Header();
         signUpPage = header.clickSignUpButton();
@@ -50,5 +50,4 @@ public class SignUpTestSuccess extends SelenBaseTest {
 
         assertTrue(verifPage.verifyPageElementDisplayed(), "Verify page element is not displayed");
     }
-
 }

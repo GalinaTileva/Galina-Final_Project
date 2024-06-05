@@ -13,7 +13,7 @@ public class DeleteTest extends ApiTestBase {
     @Story("Delete repository.")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Delete specific repository if exists.")
-    @Test(priority = 3)
+    @Test()
     public void deleteRepo() {
         DeleteRequest deleteRequest = new DeleteRequest();
         deleteRequest.setRepoNameDelete("Sega");
@@ -49,7 +49,7 @@ public class DeleteTest extends ApiTestBase {
     @Story("Verify specific repository does not exist.")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Check specific repository does not exist.")
-    @Test(priority = 4)
+    @Test()
     public void checkIfDeleted() {
         DeleteRequest deleteRequest = new DeleteRequest();
         deleteRequest.setRepoNameDelete("Sega");

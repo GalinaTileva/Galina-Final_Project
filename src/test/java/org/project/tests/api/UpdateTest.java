@@ -1,7 +1,7 @@
 package org.project.tests.api;
 
 import io.qameta.allure.*;
-import org.project.utils.api.management.utils.ApiUtils;
+import org.project.utils.api.utils.ApiUtils;
 import org.project.utils.api.management.update.PatchRequest;
 import org.project.utils.api.management.update.PatchResponse;
 import org.testng.annotations.Test;
@@ -15,7 +15,7 @@ public class UpdateTest extends ApiTestBase {
     @Story("Rename Repository")
     @Severity(SeverityLevel.NORMAL)
     @Description("Successful rename repository.")
-    @Test(priority = 2)
+    @Test()
     public void renameRepo() {
         PatchRequest patchRequest = new PatchRequest();
         patchRequest.setName("Sega");

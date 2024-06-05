@@ -1,4 +1,4 @@
-package org.project.utils.api.management.utils;
+package org.project.utils.api.utils;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;

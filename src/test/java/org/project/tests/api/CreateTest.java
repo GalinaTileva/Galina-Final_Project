@@ -1,7 +1,7 @@
 package org.project.tests.api;
 
 import io.qameta.allure.*;
-import org.project.utils.api.management.utils.ApiUtils;
+import org.project.utils.api.utils.ApiUtils;
 import org.project.utils.api.management.create.reporequest.RepoRequest;
 import org.project.utils.api.management.create.reporesponse.RepoResponse;
 import org.testng.annotations.Test;
@@ -15,7 +15,7 @@ public class CreateTest extends ApiTestBase {
     @Story("User can create new repository.")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Generating a new repository.")
-    @Test(priority = 0)
+    @Test()
     public void createRepo() {
         RepoRequest repoRequest = new RepoRequest();
         repoRequest.setName("Utre");

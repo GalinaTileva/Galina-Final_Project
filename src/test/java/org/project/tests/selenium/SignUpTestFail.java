@@ -24,7 +24,7 @@ public class SignUpTestFail extends SelenBaseTest {
     @Story("To be notified if invalid email is entered during registration.")
     @Severity(SeverityLevel.NORMAL)
     @Description("Correct identification of invalid emails and appropriate error message is returned.")
-    @Test(dataProvider = "negative-email-data", priority = 6)
+    @Test(dataProvider = "negative-email-data")
     public void testFailEmail(String email, String emailErrorMessage) {
         SoftAssert soft = new SoftAssert();
         header = new Header();
@@ -44,7 +44,7 @@ public class SignUpTestFail extends SelenBaseTest {
     @Story("To be notified if invalid password is entered during registration.")
     @Severity(SeverityLevel.NORMAL)
     @Description("Correct identification of invalid passwords and appropriate error message is returned.")
-    @Test(dataProvider = "negative-password-data", priority = 7)
+    @Test(dataProvider = "negative-password-data")
     public void testFailPassword(String password, String passwordErrorMessage) {
         SoftAssert soft = new SoftAssert();
         header = new Header();
@@ -65,7 +65,7 @@ public class SignUpTestFail extends SelenBaseTest {
     @Story("To be notified if invalid username is entered during registration.")
     @Severity(SeverityLevel.NORMAL)
     @Description("Correct identification of invalid usernames and appropriate error message is returned.")
-    @Test(dataProvider = "negative-username-data", priority = 8)
+    @Test(dataProvider = "negative-username-data")
     public void testFailUsername(String username, String userErrorMessage) {
         SoftAssert soft = new SoftAssert();
         header = new Header();
@@ -76,5 +76,4 @@ public class SignUpTestFail extends SelenBaseTest {
         soft.assertEquals(userErrorMessage, signUpPage.getUsernameErrorMessage());
         soft.assertAll();
     }
-
 }
