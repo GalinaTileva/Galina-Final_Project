@@ -46,8 +46,7 @@ public class SignUpTestSuccess extends SelenBaseTest {
     public void positiveLogin(String email, String password, String username) throws InterruptedException {
         header = new Header();
         signUpPage = header.clickSignUpButton();
-        verifPage = signUpPage.goToVerifPage("canot94906@jahsec.com","GreenAlien88",
-                "ImOnAVacation");
+        verifPage = signUpPage.goToVerifPage(email, password, username);
 
         assertTrue(verifPage.verifyPageElementDisplayed(), "Verify page element is not displayed");
     }
