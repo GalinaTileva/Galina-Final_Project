@@ -15,7 +15,7 @@ public class UpdateTest extends ApiTestBase {
     @Story("Rename Repository")
     @Severity(SeverityLevel.NORMAL)
     @Description("Successful rename repository.")
-    @Test()
+    @Test
     public void renameRepo() {
         PatchRequest patchRequest = new PatchRequest();
         patchRequest.setName("Sega");

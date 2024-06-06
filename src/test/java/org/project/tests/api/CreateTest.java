@@ -15,7 +15,7 @@ public class CreateTest extends ApiTestBase {
     @Story("User can create new repository.")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Generating a new repository.")
-    @Test()
+    @Test
     public void createRepo() {
         RepoRequest repoRequest = new RepoRequest();
         repoRequest.setName("Utre");

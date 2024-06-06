@@ -13,7 +13,7 @@ public class ReadTest extends ApiTestBase {
     @Story("User can access repository details.")
     @Severity(SeverityLevel.NORMAL)
     @Description("Getting repository details.")
-    @Test()
+    @Test
     public void readRepo() {
         SoftAssert soft = new SoftAssert();
 

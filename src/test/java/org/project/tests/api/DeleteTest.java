@@ -13,7 +13,7 @@ public class DeleteTest extends ApiTestBase {
     @Story("Delete repository.")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Delete specific repository if exists.")
-    @Test()
+    @Test
     public void deleteRepo() {
         DeleteRequest deleteRequest = new DeleteRequest();
         deleteRequest.setRepoNameDelete("Sega");
@@ -40,7 +40,7 @@ public class DeleteTest extends ApiTestBase {
                     .then()
                     .statusCode(204);
         } else {
-            System.out.println("Repository does not exist or cannot be accessed.");
+            System.out.println("Repository does not exist or can not be accessed.");
         }
     }
 
@@ -49,7 +49,7 @@ public class DeleteTest extends ApiTestBase {
     @Story("Verify specific repository does not exist.")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Check specific repository does not exist.")
-    @Test()
+    @Test
     public void checkIfDeleted() {
         DeleteRequest deleteRequest = new DeleteRequest();
         deleteRequest.setRepoNameDelete("Sega");
