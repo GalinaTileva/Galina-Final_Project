@@ -15,7 +15,7 @@ public class HeaderTest extends SelenBaseTest {
     @Story("Navigation from home to sign up page for new registration.")
     @Severity(SeverityLevel.NORMAL)
     @Description("User can navigate from home to sign up page and is redirected to sign up form.")
-    @Test()
+    @Test
     public void goToSignUpPage(){
         header = new Header();
         signUpPage = header.clickSignUpButton();
